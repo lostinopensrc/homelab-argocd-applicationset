@@ -2,6 +2,7 @@ apiVersion: argoproj.io/v1alpha1
 kind: ApplicationSet
 metadata:
   name: tenants
+  namespace: argo-cd
 spec:
   generators:
   - git:
@@ -22,8 +23,8 @@ spec:
           valueFiles:
             - {{tenant_id}}.yaml
       destination:
-        server: '{{k8s_cluster.address}}'
-        namespace: '{{k8s_cluster.namespace}}'
+        server: '{{cluster.address}}'
+        namespace: '{{cluster.namespace}}'
       syncPolicy:
         syncOptions:
         - CreateNamespace=true
