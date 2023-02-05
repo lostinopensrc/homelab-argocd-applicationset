@@ -1,5 +1,4 @@
   {
-    "tenant": "grafana",
     "tenant_id": "grafana",
     "cluster": {
       "namespace": "homelab-grafana",
