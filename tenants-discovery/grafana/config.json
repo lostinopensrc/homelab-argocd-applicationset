@@ -1,0 +1,12 @@
+{
+    "tenant": {
+      "owner": "lostinopensrc@gmail.com",
+      "name": "grafana",
+      "id": "grafana"
+    },
+    "k8s_cluster": {
+      "owner": "lostinopensrc@gmail.com",
+      "address": "https://kubernetes.default.svc",
+      "namespace": "homelab-grafana"
+    }
+  }

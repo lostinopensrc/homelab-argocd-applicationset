@@ -1,0 +1,19 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: homelab-tenant-appsets
+  # You'll usually want to add your resources to the argocd namespace.
+  namespace: argo-cd
+  # Add a this finalizer ONLY if you want these to cascade delete.
+  finalizers:
+    - resources-finalizer.argocd.argoproj.io
+spec:
+  # The project the application belongs to.
+  project: default
+  source:
+    repoURL: https://github.com/lostinopensrc/homelab-argocd-applicationset.git
+    targetRevision: main
+    path: applicationsets
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: argo-cd
