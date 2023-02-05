@@ -4,11 +4,11 @@ metadata:
   name: tenants
 spec:
   generators:
-    - git:
-        repoURL: https://github.com/lostinopensrc/homelab-argocd-applicationset.git
-        revision: main
-        files:
-          - path: "tenants-discovery/**/config.json"
+  - git:
+      repoURL: https://github.com/lostinopensrc/homelab-argocd-applicationset.git
+      revision: main
+      files:
+      - path: "tenants-discovery/**/config.json"
   template:
     metadata:
       name: '{{tenant.id}}'
