@@ -9,7 +9,7 @@ spec:
       repoURL: https://github.com/lostinopensrc/homelab-argocd-applicationset.git
       revision: main
       files:
-      - path: "tenants-discovery/tenants/**/config.json"
+      - path: "tenants-discovery/tenants/*/config.json"
   template:
     metadata:
       name: '{{tenantid}}'
