@@ -1,7 +1,7 @@
   {
     "tenant": "grafana",
     "tenant_id": "grafana",
-    "k8s_cluster": {
+    "cluster": {
       "namespace": "homelab-grafana",
       "address": "https://kubernetes.default.svc"
     }
