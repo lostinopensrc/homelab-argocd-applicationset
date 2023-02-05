@@ -9,19 +9,19 @@ spec:
       repoURL: https://github.com/lostinopensrc/homelab-argocd-applicationset.git
       revision: main
       files:
-      - path: "tenants-discovery/tenants/grafana/config.json"
+      - path: "tenants-discovery/tenants/**/config.json"
   template:
     metadata:
-      name: '{{tenant_id}}'
+      name: '{{tenantid}}'
     spec:
       project: default
       source:
         repoURL: https://github.com/lostinopensrc/homelab-argocd-applicationset.git
         targetRevision: main
-        path: 'tenants/{{tenant_id}}'
+        path: 'tenants/{{tenantid}}'
         helm:
           valueFiles:
-            - {{tenant_id}}.yaml
+            - {{tenantid}}.yaml
       destination:
         server: '{{cluster.address}}'
         namespace: '{{cluster.namespace}}'
