@@ -25,6 +25,3 @@ spec:
       destination:
         server: '{{cluster.address}}'
         namespace: '{{cluster.namespace}}'
-      syncPolicy:
-        syncOptions:
-        - CreateNamespace=true
