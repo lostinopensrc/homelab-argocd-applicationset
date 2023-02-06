@@ -1,7 +1,7 @@
-  {
-    "tenantid": "grafana",
-    "cluster": {
-      "namespace": "homelab-grafana",
-      "address": "https://kubernetes.default.svc"
-    }
+{
+  "tenantid": "grafana",
+  "cluster": {
+    "namespace": "homelab-grafana",
+    "address": "https://kubernetes.default.svc"
   }
+}
