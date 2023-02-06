@@ -18,7 +18,7 @@ spec:
       source:
         repoURL: https://github.com/lostinopensrc/homelab-argocd-applicationset.git
         targetRevision: main
-        path: tenants/'{{tenantid}}'
+        path: 'tenants/{{tenantid}}'
         helm:
           valueFiles:
             - '{{tenantid}}'.yaml
