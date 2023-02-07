@@ -12,16 +12,16 @@ spec:
       - path: "tenants-discovery/tenants/**/config.json"
   template:
     metadata:
-      name: '{{path.basename}}'
+      name: '{{tenantid}}'
     spec:
       project: default
       source:
         repoURL: https://github.com/lostinopensrc/homelab-argocd-applicationset.git
         targetRevision: main
-        path: 'tenants/{{path.basename}}'
+        path: 'tenants/{{tenantid}}'
         helm:
           valueFiles:
-            - '{{path.basename}}'.yaml
+            - '{{tenantid}}.yaml'
       destination:
         server: '{{cluster.address}}'
         namespace: '{{cluster.namespace}}'
