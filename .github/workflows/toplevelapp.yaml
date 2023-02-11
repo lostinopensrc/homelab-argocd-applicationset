@@ -18,13 +18,12 @@ jobs:
       run: | 
         echo "KUBECONFIG: ${KUBECONFIG}"
 
-    # - name: Configure Kubectl
-    #   run: |
-    #     echo ${KUBECONFIG} | base64 --decode > kubeconfig.yaml
+    - name: Configure Kubectl
+      run: |
+        echo ${KUBECONFIG} | base64 --decode > kubeconfig.yaml
 
-    # - name: Apply top level App
-    #   run: |
-    #     export ${KUBECONFIG}
-    #     kubectl apply -f top-level-app/TopLevelApplication.yaml
-      # env:
-      #   KUBECONFIG: kubeconfig.yaml
+    - name: Apply top level App
+      run: |
+        kubectl apply -f top-level-app/TopLevelApplication.yaml
+      env:
+        KUBECONFIG: kubeconfig.yaml
