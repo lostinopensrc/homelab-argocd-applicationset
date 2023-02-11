@@ -3,8 +3,8 @@ name: Deploy Top level app
 on:
   workflow_dispatch:
   
-env:
-  KUBECONFIG: ${{ secrets.KUBECONFIG }}
+# env:
+#   KUBECONFIG: ${{ secrets.KUBECONFIG }}
 
 jobs:
   deploy:
@@ -14,16 +14,15 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v3
 
-    - name: Debug - Print KUBECONFIG
-      run: | 
-        echo "KUBECONFIG: ${KUBECONFIG}"
+    # - name: Debug - Print KUBECONFIG
+    #   run: | 
+    #     echo "KUBECONFIG: ${KUBECONFIG}"
 
-    - name: Configure Kubectl
-      run: |
-        echo ${KUBECONFIG} | base64 --decode > kubeconfig.yaml
+    # - name: Configure Kubectl
+    #   run: |
+    #     echo ${KUBECONFIG} | base64 --decode > kubeconfig.yaml
 
     - name: Apply top level App
       run: |
+        export KUBECONFIG=$HOME/.kube/config
         kubectl apply -f top-level-app/TopLevelApplication.yaml
-      env:
-        KUBECONFIG: kubeconfig.yaml
