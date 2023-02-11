@@ -12,15 +12,18 @@ jobs:
 
     steps:
     - name: Checkout code
-      uses: actions/checkout@v2
+      uses: actions/checkout@v3
+
+    - name: Debug - Print KUBECONFIG
+      run: echo "KUBECONFIG: ${KUBECONFIG}"
 
     # - name: Configure Kubectl
     #   run: |
     #     echo ${KUBECONFIG} | base64 --decode > kubeconfig.yaml
 
-    - name: Apply top level App
-      run: |
-        export ${KUBECONFIG}
-        kubectl apply -f top-level-app/TopLevelApplication.yaml
+    # - name: Apply top level App
+    #   run: |
+    #     export ${KUBECONFIG}
+    #     kubectl apply -f top-level-app/TopLevelApplication.yaml
       # env:
       #   KUBECONFIG: kubeconfig.yaml
