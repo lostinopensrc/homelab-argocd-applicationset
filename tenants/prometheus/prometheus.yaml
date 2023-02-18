@@ -5,6 +5,9 @@ alertmanager:
 grafana:
   enabled: false
 
+prometheusOperator:
+  enabled: false
+
 prometheus:
   prometheusSpec:
     storageSpec:
