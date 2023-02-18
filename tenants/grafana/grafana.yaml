@@ -10,9 +10,9 @@ service:
   port: 80
 
 persistence:
-  type: statefulset
-  enabled: true
-  storageClassName: longhorn
+  enabled: false
+  inMemory:
+    enabled: true
 
 adminUser: admin
 adminPassword: Sarita@17
