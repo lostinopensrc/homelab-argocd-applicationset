@@ -1,0 +1,19 @@
+alertmanager:
+  ## Deploy alertmanager
+  enabled: false
+
+grafana:
+  enabled: false
+
+prometheus:
+  prometheusSpec:
+    storageSpec:
+    ## Using PersistentVolumeClaim
+      volumeClaimTemplate:
+        spec:
+          storageClassName: longhorn
+          accessModes: ["ReadWriteOnce"]
+          resources:
+            requests:
+              storage: 2Gi
+
