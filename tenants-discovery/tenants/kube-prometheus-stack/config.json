@@ -1,0 +1,7 @@
+{
+    "tenantid": "kube-prometheus-stack",
+    "cluster": {
+      "namespace": "homelab-prom",
+      "address": "https://kubernetes.default.svc"
+    }
+  }
