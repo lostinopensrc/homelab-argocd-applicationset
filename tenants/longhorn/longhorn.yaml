@@ -1,0 +1,8 @@
+ingress:
+  ## Set to true to enable ingress record generation
+  enabled: false
+
+enablePSP: false
+
+persistence:
+  defaultClassReplicaCount: 1
