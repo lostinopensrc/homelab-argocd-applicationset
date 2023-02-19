@@ -1,7 +1,8 @@
 server:
   persistentVolume:
-    size: 2Gi
-    storageClass: "longhorn"
+    enabled: false
+  emptyDir:
+    sizeLimit: "2Gi"
 
 alertmanager:
   enabled: false
