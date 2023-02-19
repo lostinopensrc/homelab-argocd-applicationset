@@ -1,0 +1,10 @@
+server:
+  persistentVolume:
+    size: 5Gi
+    storageClass: "longhorn"
+
+alertmanager:
+  enabled: false
+
+prometheus-pushgateway:
+  enabled: false
