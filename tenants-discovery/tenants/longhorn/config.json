@@ -1,0 +1,7 @@
+{
+    "tenantid": "longhorn",
+    "cluster": {
+      "namespace": "longhorn-system",
+      "address": "https://kubernetes.default.svc"
+    }
+  }
