@@ -2,7 +2,7 @@ apiVersion: argoproj.io/v1alpha1
 kind: ApplicationSet
 metadata:
   name: homelab-tenants
-  namespace: argo-cd
+  namespace: argocd
 spec:
   generators:
   - git:
