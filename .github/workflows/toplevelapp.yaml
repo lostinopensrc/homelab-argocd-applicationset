@@ -8,7 +8,7 @@ on:
 
 jobs:
   deploy:
-    runs-on: homelab
+    runs-on: homelab-origin
 
     steps:
     - name: Checkout code
